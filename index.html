@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Princeton Teq | Computers, Laptops & Repairs</title>
+<style>
+:root{--bg:#fbfbfd;--alt:#f2f2f5;--text:#1d1d1f;--muted:#6e6e73;--line:#d9d9de;--blue:#0071e3;--card:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--alt:#111113;--text:#f5f5f7;--muted:#98989d;--line:#2c2c30;--blue:#2997ff;--card:#161618;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#000;--alt:#111113;--text:#f5f5f7;--muted:#98989d;--line:#2c2c30;--blue:#2997ff;--card:#161618;color-scheme:dark}
+.dk{--bg:#000;--alt:#111113;--text:#f5f5f7;--muted:#98989d;--line:#2c2c30;--blue:#2997ff;--card:#161618}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.47}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 12px) 24px 12px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.lg{width:26px;height:26px;border-radius:7px;border:1.5px dashed var(--muted);display:grid;place-items:center;font-size:.45rem;color:var(--muted)}
+.links{display:none;gap:28px;font-size:.85rem;color:var(--muted)}.links a:hover{color:var(--text)}
+@media(min-width:760px){.links{display:flex}}
+.cartb{position:relative;background:none;border:0;color:var(--text);font:inherit;font-size:.85rem;cursor:pointer;padding:6px 10px;border-radius:20px}
+.cartb:hover{background:var(--alt)}
+#cnt{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:var(--blue);color:#fff;font-size:.7rem;margin-left:6px;padding:0 5px}
+.hero{background:radial-gradient(ellipse at 50% 0%,#12315c 0%,#000 62%);color:#f5f5f7;text-align:center;padding:84px 24px 0;overflow:hidden;--muted:#98989d}
+.eyebrow{font-size:.95rem;font-weight:600;color:#ff9f45;margin:0 0 8px}
+h1{font-size:clamp(2.6rem,8vw,5.5rem);line-height:1.04;letter-spacing:-.035em;margin:0 auto 14px;font-weight:700;max-width:900px}
+.grad{background:linear-gradient(90deg,#6db3ff,#b48cff 55%,#ff9f7a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1.1rem,2.4vw,1.45rem);color:#a1a1a6;max-width:640px;margin:0 auto 26px;letter-spacing:-.01em}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.pill{display:inline-block;padding:12px 24px;border-radius:980px;background:var(--blue);color:#fff;font-size:1rem;border:0;cursor:pointer;font-family:inherit;transition:transform .25s,filter .25s}
+.pill:hover{filter:brightness(1.12);transform:scale(1.03)}
+.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.stage{margin:56px auto 0;max-width:760px;perspective:1400px;height:clamp(230px,44vw,390px)}
+.lap{transform-origin:50% 100%;transition:transform .1s linear}
+.scr{margin:0 auto;width:78%;aspect-ratio:16/10;border-radius:14px 14px 0 0;border:7px solid #1b1b1e;border-bottom:0;background:linear-gradient(135deg,#0b2a55,#3b1d6e 55%,#d1546b);box-shadow:0 0 120px rgba(80,140,255,.35);position:relative;overflow:hidden}
+.scr::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);animation:sh 6s ease-in-out infinite}
+@keyframes sh{0%,100%{transform:translateX(-60%)}50%{transform:translateX(60%)}}
+.bs{width:94%;height:14px;margin:0 auto;border-radius:0 0 18px 18px;background:linear-gradient(#3a3a3f,#1a1a1d)}
+section{padding:110px 24px}
+.in{max-width:1040px;margin:0 auto}
+.ctr{text-align:center}
+h2{font-size:clamp(2rem,5.4vw,3.4rem);letter-spacing:-.03em;line-height:1.08;margin:0 0 12px;font-weight:700}
+.sub{color:var(--muted);font-size:1.2rem;max-width:620px;margin:0 auto 44px}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;text-align:center;margin-top:50px}
+.big b{display:block;font-size:clamp(2.6rem,6vw,4.2rem);letter-spacing:-.04em;font-weight:700;line-height:1}
+.big span{color:var(--muted);font-size:.95rem}
+.pc-showcase{position:relative;max-width:780px;margin:12px auto 0}
+.pc-showcase::before{content:"";position:absolute;inset:18% 12% 12%;border-radius:50%;background:radial-gradient(ellipse,rgba(69,111,255,.32),rgba(137,68,219,.14) 45%,transparent 72%);filter:blur(28px)}
+.pc-showcase svg{position:relative;display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 28px 36px rgba(0,0,0,.48))}
+.pc-screen-glow{animation:pcGlow 8s ease-in-out infinite alternate}
+@keyframes pcGlow{from{opacity:.72}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.pc-screen-glow{animation:none}}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.tab{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 18px;border-radius:980px;font:inherit;font-size:.9rem;cursor:pointer;transition:all .25s}
+.tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{background:var(--card);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.14)}
+.art{aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(160deg,var(--alt),var(--card));position:relative}
+.art svg{width:46%;color:var(--muted);opacity:.9}
+.art i{position:absolute;bottom:8px;font-style:normal;font-size:.68rem;color:var(--muted)}
+.body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{font-size:.75rem;font-weight:600;color:#ff7a1a}
+.card h3{margin:0;font-size:1.35rem;letter-spacing:-.02em}
+.spec{color:var(--muted);font-size:.92rem;flex:1}
+.pr{font-weight:600;margin-top:8px}
+.card .pill{margin-top:12px;align-self:flex-start;padding:9px 20px;font-size:.9rem}
+.alt{background:var(--alt)}
+table{width:100%;border-collapse:collapse;font-size:.98rem}
+th,td{padding:18px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;letter-spacing:-.01em}td:first-child{color:var(--muted);width:24%}
+.tw{overflow-x:auto}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.svc div{background:var(--card);border-radius:20px;padding:26px}
+.svc b{display:block;font-size:1.1rem;margin-bottom:4px;letter-spacing:-.01em}.svc span{color:var(--muted);font-size:.93rem}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scr::after{animation:none}html{scroll-behavior:auto}}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--bg);z-index:40;transform:translateX(105%);transition:transform .5s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 22px) 24px calc(env(safe-area-inset-bottom,0px) + 22px);box-shadow:-30px 0 80px rgba(0,0,0,.25)}
+.drawer.open{transform:none}
+.veil{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .4s;z-index:30}.veil.open{opacity:1;pointer-events:auto}
+.dh{display:flex;justify-content:space-between;align-items:center;font-size:1.3rem;font-weight:700;margin-bottom:12px}
+.x{background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+#items{flex:1;overflow:auto}
+.ln{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ln small{display:block;color:var(--muted)}
+.q{display:flex;align-items:center;gap:10px}.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+.empty{color:var(--muted);padding:30px 0}
+.visit{text-align:center}
+footer{padding:30px 24px 40px;text-align:center;color:var(--muted);font-size:.8rem}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#top"><span class="lg">LOGO</span>Princeton Teq</a>
+  <div class="links"><a href="#shop">Shop</a><a href="#compare">Compare</a><a href="#services">Services</a><a href="#visit">Visit</a></div>
+  <button class="cartb" id="open" aria-label="Open bag">Bag<span id="cnt">0</span></button>
+</nav>
+
+<header class="hero" id="top">
+  <p class="eyebrow">Princeton Teq · Dome, Accra</p>
+  <h1>Power that <span class="grad">works as hard as you do.</span></h1>
+  <p class="lead">Computers, laptops, and upgrades, backed by the repair team that keeps them running.</p>
+  <div class="cta"><a class="pill" href="#shop">Shop now</a><a class="pill ghost" href="#compare">Compare</a></div>
+  <div class="stage"><div class="lap" id="lap"><div class="scr"></div><div class="bs"></div></div></div>
+</header>
+
+<section class="dk" style="background:#000">
+  <div class="in ctr">
+    <p class="eyebrow rv">HP Envy All-in-One</p>
+    <h2 class="rv">One screen. Zero compromise.</h2>
+    <p class="sub rv">A 34-inch ultrawide display and desktop-class power in a single, clean setup for your desk.</p>
+    <div class="pc-showcase rv" role="img" aria-label="Illustration of an HP Envy all-in-one desktop computer">
+      <svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="pcFrame" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#55555d"/><stop offset=".16" stop-color="#222226"/><stop offset="1" stop-color="#09090b"/></linearGradient>
+          <linearGradient id="pcWall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#12366e"/><stop offset=".48" stop-color="#5543a7"/><stop offset="1" stop-color="#e56c83"/></linearGradient>
+          <linearGradient id="pcWave" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5dd8ff"/><stop offset=".5" stop-color="#9f83ff"/><stop offset="1" stop-color="#ff9d87"/></linearGradient>
+          <linearGradient id="pcStand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#28282d"/><stop offset=".5" stop-color="#5d5d64"/><stop offset="1" stop-color="#222226"/></linearGradient>
+          <clipPath id="pcScreen"><rect x="111" y="42" width="498" height="296" rx="9"/></clipPath>
+        </defs>
+        <ellipse cx="360" cy="393" rx="214" ry="17" fill="#7775ff" opacity=".13"/>
+        <rect x="96" y="25" width="528" height="331" rx="19" fill="url(#pcFrame)" stroke="#77777e" stroke-width="2"/>
+        <rect x="103" y="32" width="514" height="317" rx="13" fill="#09090c"/>
+        <g clip-path="url(#pcScreen)">
+          <rect x="111" y="42" width="498" height="296" fill="url(#pcWall)"/>
+          <g class="pc-screen-glow">
+            <path d="M87 286C185 173 276 156 355 205s133 66 278-67v225H87Z" fill="url(#pcWave)" opacity=".83"/>
+            <path d="M84 316c120-102 215-127 300-76s145 53 255-19v127H84Z" fill="#111a4b" opacity=".72"/>
+            <circle cx="490" cy="103" r="46" fill="#ffc4ac" opacity=".3"/>
+            <circle cx="490" cy="103" r="28" fill="#ffd9c3" opacity=".42"/>
+          </g>
+          <path d="M111 42h498v296H111z" fill="url(#pcWall)" opacity=".08"/>
+        </g>
+        <circle cx="360" cy="349" r="2.5" fill="#85858c"/>
+        <path d="M337 356h46l18 35H319z" fill="url(#pcStand)"/>
+        <path d="M298 390h124c8 0 13 5 13 11v3H285v-3c0-6 5-11 13-11Z" fill="url(#pcStand)" stroke="#68686f" stroke-width="1"/>
+        <path d="M309 394h102" stroke="#85858c" stroke-opacity=".38"/>
+      </svg>
+    </div>
+    <div class="big">
+      <div class="rv"><b class="grad">34″</b><span>Ultrawide display</span></div>
+      <div class="rv"><b class="grad">5120×2160</b><span>Resolution</span></div>
+      <div class="rv"><b class="grad">i9</b><span>Intel Core i9-11900</span></div>
+      <div class="rv"><b class="grad">32GB</b><span>Memory</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="in">
+    <div class="ctr"><h2 class="rv">Shop the store.</h2><p class="sub rv">Add what you want to your bag and send the order straight to us on WhatsApp.</p></div>
+    <div class="tabs rv" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="alt" id="compare">
+  <div class="in">
+    <div class="ctr"><h2 class="rv">Which one is right for you?</h2><p class="sub rv">A quick look at what each option is built for.</p></div>
+    <div class="tw rv"><table>
+      <tr><th></th><th>All-in-One PC</th><th>Pre-owned laptop</th><th>Upgrades</th></tr>
+      <tr><td>Best for</td><td>Office, design, a serious desk setup</td><td>Students and anyone on a budget</td><td>Making your current machine faster</td></tr>
+      <tr><td>Condition</td><td>New</td><td>UK used and store rejects</td><td>New parts</td></tr>
+      <tr><td>Highlights</td><td>34″ 5120×2160, Core i9-11900, 32GB</td><td>Portable, affordable, ask for current stock</td><td>SSD, RAM, HDD, adapters</td></tr>
+      <tr><td>Installed for you</td><td>Yes, Windows and software on request</td><td>Yes, Windows and software on request</td><td>Yes, fitted in the shop</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="in">
+    <div class="ctr"><h2 class="rv">Support that stays.</h2><p class="sub rv">Every purchase is backed by the people who fix computers all day.</p></div>
+    <div class="svc">
+      <div class="rv"><b>Repair &amp; recovery</b><span>Computer repair and data recovery.</span></div>
+      <div class="rv"><b>Mac OS &amp; Windows</b><span>Clean installs and software setup.</span></div>
+      <div class="rv"><b>Security</b><span>Virus removal and protection.</span></div>
+      <div class="rv"><b>Hardware upgrades</b><span>More speed, more memory, more life.</span></div>
+      <div class="rv"><b>Network &amp; CCTV</b><span>Installed for homes and businesses.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk visit" id="visit" style="background:#000">
+  <div class="in">
+    <h2 class="rv">Come say hello.</h2>
+    <p class="sub rv">Dome, opposite the Anglican Church.<br>+233 24 340 4249</p>
+    <div class="cta rv"><a class="pill" href="https://wa.me/233243404249">Chat on WhatsApp</a><a class="pill ghost" href="tel:+233243404249">Call us</a></div>
+  </div>
+</section>
+<footer>Princeton Teq · Dome, Accra</footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Bag">
+  <div class="dh">Your bag <button class="x" id="close" aria-label="Close">×</button></div>
+  <div id="items"></div>
+  <a class="pill" id="send" style="text-align:center;margin-top:16px" href="#">Send order on WhatsApp</a>
+</aside>
+
+<script>
+// Edit prices here, e.g. aio: 15000. Leave null to show "Ask for price".
+var PRICE={aio:null,lap:null,chg:null,ssd:null,ram:null,hdd:null};
+var WA="233243404249";
+var P=[
+{id:"aio",c:"pc",n:"HP Envy All-in-One 34″",s:"5120 × 2160 display, Intel Core i9-11900, 32GB RAM.",t:"Flagship"},
+{id:"lap",c:"laptop",n:"Pre-owned laptops",s:"UK used and store reject laptops at fair prices. Ask for current stock."},
+{id:"chg",c:"acc",n:"Chargers & adapters",s:"For most laptop brands. Tell us your model.",t:"Most bought"},
+{id:"ssd",c:"acc",n:"SSD upgrades",s:"Faster start-up and load times."},
+{id:"ram",c:"acc",n:"RAM upgrades",s:"More memory for smoother multitasking."},
+{id:"hdd",c:"acc",n:"HDD storage",s:"Extra space for files and backups."}];
+var ICON={pc:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="52" height="34" rx="3"/><path d="M24 54h16M32 44v10"/></svg>',laptop:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="14" width="40" height="28" rx="3"/><path d="M4 48h56l-4 4H8z"/></svg>',acc:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="16" y="18" width="32" height="28" rx="4"/><path d="M24 18v-8M40 18v-8M32 46v8"/></svg>'};
+var cart={},cat="all";
+function money(id){return PRICE[id]!=null?"GH₵ "+Number(PRICE[id]).toLocaleString():"Ask for price"}
+function tabs(){var T=[["all","All"],["pc","Computers"],["laptop","Laptops"],["acc","Accessories"]],h="";
+T.forEach(function(t){h+='<button class="tab'+(cat==t[0]?" on":"")+'" data-c="'+t[0]+'">'+t[1]+'</button>'});
+var e=document.getElementById("tabs");e.innerHTML=h;
+e.querySelectorAll("button").forEach(function(b){b.onclick=function(){cat=b.dataset.c;tabs();grid()}})}
+function grid(){var h="";P.filter(function(p){return cat=="all"||p.c==cat}).forEach(function(p){
+h+='<div class="card"><div class="art">'+ICON[p.c]+'<i>Photo coming soon</i></div><div class="body">'+(p.t?'<span class="tag">'+p.t+'</span>':'')+'<h3>'+p.n+'</h3><div class="spec">'+p.s+'</div><div class="pr">'+money(p.id)+'</div><button class="pill" data-id="'+p.id+'">Add to bag</button></div></div>'});
+var g=document.getElementById("grid");g.innerHTML=h;
+g.querySelectorAll("button").forEach(function(b){b.onclick=function(){cart[b.dataset.id]=(cart[b.dataset.id]||0)+1;draw();toggle(true)}})}
+function draw(){var n=0,h="",m=["Hello Princeton Teq, I would like to order:"];
+P.forEach(function(p){var q=cart[p.id];if(q){n+=q;h+='<div class="ln"><div>'+p.n+'<small>'+money(p.id)+'</small></div><div class="q"><button data-d="-1" data-id="'+p.id+'">−</button>'+q+'<button data-d="1" data-id="'+p.id+'">+</button></div></div>';m.push("- "+q+" x "+p.n)}});
+document.getElementById("cnt").textContent=n;
+var it=document.getElementById("items");it.innerHTML=h||'<p class="empty">Your bag is empty.</p>';
+it.querySelectorAll("button").forEach(function(b){b.onclick=function(){var id=b.dataset.id;cart[id]+=+b.dataset.d;if(cart[id]<1)delete cart[id];draw()}});
+document.getElementById("send").href=n?"https://wa.me/"+WA+"?text="+encodeURIComponent(m.join("\n")):"#"}
+function toggle(o){document.getElementById("drawer").classList.toggle("open",o);document.getElementById("veil").classList.toggle("open",o)}
+document.getElementById("open").onclick=function(){toggle(true)};
+document.getElementById("close").onclick=document.getElementById("veil").onclick=function(){toggle(false)};
+tabs();grid();draw();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}})},{threshold:.15});
+function watch(){document.querySelectorAll(".rv:not(.show)").forEach(function(el){io.observe(el)})}watch();
+var lap=document.getElementById("lap"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+if(!still)addEventListener("scroll",function(){var y=Math.min(scrollY,600)/600;lap.style.transform="rotateX("+(18-y*18)+"deg) scale("+(1+y*.12)+")"},{passive:true});
+</script>
+</body>
+</html>
